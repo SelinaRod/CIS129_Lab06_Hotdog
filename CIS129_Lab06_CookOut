@@ -1,0 +1,32 @@
+#Selina Rodriguez
+
+
+import math
+
+# Declare hot dogs and hot dog buns
+HOT_DOGS_PER_PACKAGE = 10
+HOT_DOGS_BUNS_PER_PACKAGE = 8
+
+# Get the number of attendees
+attendees = int(input('Enter the number of guests: '))
+
+# Number of hot dogs per person
+hot_dogs_per_person = int(input('Hot dogs per person: '))
+
+# Number of hot dogs required
+required_hot_dogs = attendees * hot_dogs_per_person
+packages_of_hot_dogs = required_hot_dogs / HOT_DOGS_PER_PACKAGE
+
+# Number of hot dog buns required
+packages_of_hot_dog_buns = required_hot_dogs / HOT_DOGS_BUNS_PER_PACKAGE
+
+print(f"Minimum of {packages_of_hot_dogs} hot dogs packages needed.")
+print(f"Minimum of {packages_of_hot_dog_buns} buns packages needed.")
+# Number of left over hot dogs
+remain_hotdogs =  required_hot_dogs % HOT_DOGS_PER_PACKAGE
+if remain_hotdogs != 0:
+    print(f'{remain_hotdogs} remaining Hotdogs')
+
+remain_buns = required_hot_dogs % HOT_DOGS_BUNS_PER_PACKAGE
+if remain_buns != 0:
+    print(f'{remain_buns} remaining Hotdog Buns. ')
